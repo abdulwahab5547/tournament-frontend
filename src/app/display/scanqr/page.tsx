@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Ball from '../../assets/ball.png'
+// import Ball from '../../assets/ball.png'
 import QR from '../../assets/qr.png'
 import ButtonLeft from '@/app/components/btnleft'
 import ButtonRight from '@/app/components/btnright'
@@ -13,7 +13,7 @@ function ScanQR(){
                 <div className="-rotate-6 text-3xl font-extrabold uppercase flex flex-col items-center">
                     <p className="shadow-xl">Tournament</p>
                     <div className='flex gap-3'>
-                        <Image src={Ball} width={50} alt='' className='shadow-2xl'/>
+{/*                         <Image src={Ball} width={50} alt='' className='shadow-2xl'/> */}
                         <p className='pt-2 shadow-2xl'>App</p>
                     </div>
                 </div>
