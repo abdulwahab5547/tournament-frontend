@@ -7,7 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Image from 'next/image'
-import Ball from '../../assets/ball.png'
+// import Ball from '../../assets/ball.png'
 
 function Players(){
     const router = useRouter();
@@ -38,7 +38,7 @@ function Players(){
                 <p data-aos="fade-right"
                 className="">Tournament</p>
                 <div className='flex gap-5' data-aos="fade-right">
-                    <Image src={Ball} width={150} alt='' className=''/>
+{/*                     <Image src={Ball} width={150} alt='' className=''/> */}
                     <p className='pt-2 '>App</p>
                 </div>
                 <div className='pt-7 h-28'>
