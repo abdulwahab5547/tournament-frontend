@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import React from 'react';
-import SelectTeamName from './SelectTeamName'; 
+import SelectTeamName from './selectteamname'; 
 import {toast} from 'react-hot-toast'
 
 interface MarkTeamsProps {
