@@ -1,0 +1,9 @@
+{
+  "/players/introvideo/page": "app/players/introvideo/page.js",
+  "/managers/menu/page": "app/managers/menu/page.js",
+  "/managers/registeredteams/page": "app/managers/registeredteams/page.js",
+  "/managers/leaderboard/page": "app/managers/leaderboard/page.js",
+  "/managers/submitresult/page": "app/managers/submitresult/page.js",
+  "/managers/operatorcontrol/page": "app/managers/operatorcontrol/page.js",
+  "/managers/monitorteams/page": "app/managers/monitorteams/page.js"
+}

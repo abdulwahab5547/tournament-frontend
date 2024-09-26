@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'chilax';
+  src: url('../app/fonts/Chillax-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'chilax', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.background-image {
+  background-image: url('./../app/assets/BG.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.orange-yellow-gradient{
+  @apply bg-gradient-to-r from-orangeBG via-lightYellow to-orangeBG;
+}
+
+/* Loading - rotating icon */
+
+.loading-icon{
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 15px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #F2AA1B; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EC8013; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  border: 3px solid #F2AA1B; /* Space between the thumb and track */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: 15px; /* Adjusted width of the scrollbar */
+  scrollbar-color: #EC8013 #F2AA1B; /* Thumb color and track color */
+}
+
+/* To ensure rounded corners in Firefox, you may add this if needed */
+html {
+  scrollbar-width: 15px; /* Adjusted width of the scrollbar */
+  scrollbar-color: #EC8013 #F2AA1B; /* Thumb color and track color */
+}
+
+/* Checkbox */
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px; /* Size of the custom checkbox */
+  height: 20px; /* Size of the custom checkbox */
+  cursor: pointer;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #EC8013; /* Background color when checked */
+  border: 2px solid #EC8013; /* Border color when checked */
+}
+
+.checkmark {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #F2AA1B; /* Border color */
+  border-radius: 50%; /* Rounded corners */
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.checkmark.checked {
+  background-color: #EC8013; /* Color of the checkbox when selected */
+  border: 2px solid #EC8013; /* Border color when selected */
+}
