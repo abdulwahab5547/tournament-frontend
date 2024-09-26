@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Ball from '../../assets/ball.png';
+// import Ball from '../../assets/ball.png';
 import PhoneButtonLeft from '@/app/components/phonebtnleft';
 import PhoneButtonRight from '@/app/components/phonebtnright';
 import toast from 'react-hot-toast';
@@ -102,7 +102,7 @@ function RegistrationForm() {
         <div className="-rotate-6 text-lg font-extrabold uppercase flex flex-col items-center">
           <p>Tournament</p>
           <div className="flex gap-3">
-            <Image src={Ball} width={30} height={30} alt="" className="shadow-2xl" />
+{/*             <Image src={Ball} width={30} height={30} alt="" className="shadow-2xl" /> */}
             <p>App</p>
           </div>
         </div>
