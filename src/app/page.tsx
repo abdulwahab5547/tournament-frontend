@@ -32,7 +32,7 @@
 // import ScanQR from './display/scanqr/page'
 
 export default function Home() {
-  const pathname = usePathname()
+  // const pathname = usePathname()
   return (
     <div className=''>
       {/* {pathname === '/display-score' && <DisplayScore />} */}
