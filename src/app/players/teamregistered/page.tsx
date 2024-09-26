@@ -1,44 +1,44 @@
-"use client";
+// "use client";
 
-import Image from 'next/image';
+// import Image from 'next/image';
 // import Ball from '../../assets/ball.png';
-import PhoneButtonLeft from '@/app/components/phonebtnleft';
-import PhoneButtonRight from '@/app/components/phonebtnright';
-import { useSearchParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
-import { useTournament } from '@/app/functions/tournamentcontext';
+// import PhoneButtonLeft from '@/app/components/phonebtnleft';
+// import PhoneButtonRight from '@/app/components/phonebtnright';
+// import { useSearchParams } from 'next/navigation';
+// import { useState, useEffect } from 'react';
+// import { useTournament } from '@/app/functions/tournamentcontext';
 
 // Define a Player type if you have a specific structure for your player objects
-interface Player {
-    name: string; // Adjust this type as needed based on your player data structure
-}
+// interface Player {
+//     name: string; // Adjust this type as needed based on your player data structure
+// }
 
 function TeamRegistered() {
-    const { tournament } = useTournament();
-    const searchParams = useSearchParams();
-    const teamName = searchParams.get('teamName');
-    const players = searchParams.get('players');
-    const avatarName = searchParams.get('avatarName');
-    const [playerArray, setPlayerArray] = useState<Player[]>([]); // Use the Player type for the state
+    // const { tournament } = useTournament();
+    // const searchParams = useSearchParams();
+    // const teamName = searchParams.get('teamName');
+    // const players = searchParams.get('players');
+    // const avatarName = searchParams.get('avatarName');
+    // const [playerArray, setPlayerArray] = useState<Player[]>([]); // Use the Player type for the state
 
-    useEffect(() => {
-        if (players) {
-            try {
-                const parsedPlayers: Player[] = JSON.parse(players); // Parse and type the players
-                setPlayerArray(parsedPlayers);
-            } catch (error) {
-                console.error('Error parsing players:', error);
-            }
-        }
-    }, [players]);
+    // useEffect(() => {
+    //     if (players) {
+    //         try {
+    //             const parsedPlayers: Player[] = JSON.parse(players); // Parse and type the players
+    //             setPlayerArray(parsedPlayers);
+    //         } catch (error) {
+    //             console.error('Error parsing players:', error);
+    //         }
+    //     }
+    // }, [players]);
 
     return (
         <div className="h-screen relative flex flex-col items-center justify-center text-white">
-            <div className='absolute top-5'>
+{/*             <div className='absolute top-5'>
                 <div className="-rotate-6 text-lg font-extrabold uppercase flex flex-col items-center">
                     <p>Tournament</p>
                     <div className='flex gap-3'>
-{/*                         <Image src={Ball} width={30} height={30} alt='' className='shadow-2xl' /> */}
+                        <Image src={Ball} width={30} height={30} alt='' className='shadow-2xl' />
                         <p>App</p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ function TeamRegistered() {
                     </div>
                     {playerArray.map((player, index) => (
                         <div key={index} className={`bg-${['red-700', 'green-700', 'lightYellow', 'blue-700'][index]} text-white px-3 py-2 w-52 rounded-2xl my-2`}>
-                            <p className='font-bold'>Player-{index + 1} Name: {player.name}</p> {/* Accessing player.name */}
+                            <p className='font-bold'>Player-{index + 1} Name: {player.name}</p> 
                         </div>
                     ))}
                     <div className='absolute -top-7'>
@@ -68,7 +68,7 @@ function TeamRegistered() {
             </div>
             <div className='absolute bottom-4 right-4 opacity-70'>
                 <PhoneButtonRight />
-            </div>
+            </div> */}
         </div> 
     );
 }
